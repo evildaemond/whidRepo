@@ -1,0 +1,10 @@
+REM This is the is script tailored for Windows 10 x64 that executes a new Chrome window to play Sexy Gandalf 10 Hour Version.
+DEFAULT_DELAY 150
+GUI R
+REM This is a URL for Sexy Gandalf 10 Hour Version
+STRING https://www.youtube.com/watch?v=rtUl0SXOqbM
+ENTER
+REM This is used for the Delay creaded for loading the page.
+DELAY 2000
+F11
+STRING f

@@ -1,0 +1,13 @@
+REM This is the is script tailored for Xubuntu 16.04 using XFCE with the bash enviroment that executes a new Firefox window to play Sexy Gandalf 10 Hour Version.
+DEFAULT_DELAY 150
+DELAY 500
+ALT F2
+REM This is a URL for Sexy Gandalf 10 Hour Version
+STRING xfce4-terminal
+ENTER
+STRING /usr/bin/firefox -new-window https://www.youtube.com/watch?v=rtUl0SXOqbM
+ENTER
+REM This is used for the Delay creaded for loading the page.
+DELAY 2000
+F11
+STRING f

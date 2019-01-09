@@ -1,0 +1,11 @@
+REM This is the is script tailored for Xubuntu 16.04 using XFCE with the bash enviroment that executes a new Firefox window to play Sexy Gandalf 10 Hour Version.
+DELAY 1000
+GUI SPACE
+DELAY 500
+STRING Terminal
+ENTER
+STRING /Applications/Safari.app/Contents/MacOS/Safari & sleep 1 && osascript -e 'tell application "Safari" to open location https://www.youtube.com/watch?v=rtUl0SXOqbM"'
+ENTER
+REM This is used for the Delay creaded for loading the page.
+DELAY 2000
+STRING f

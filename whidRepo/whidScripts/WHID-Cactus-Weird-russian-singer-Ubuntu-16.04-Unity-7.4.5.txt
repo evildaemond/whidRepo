@@ -1,0 +1,11 @@
+Rem:This is the is script tailored for Ubuntu 16.04 using Unity 7.4.5 with the bash enviroment that executes a new Firefox window to play Weird russian singer.
+DefaultDelay:150
+CustomDelay:500
+Press:130+195
+Rem:This is a URL for Weird russian singer
+Print:/usr/bin/firefox -new-window https://www.youtube.com/watch?v=tVj0ZTS4WF4
+Press:176
+Rem:This is used for the Delay creaded for loading the page.
+CustomDelay:2000
+Press:204
+Print:f

